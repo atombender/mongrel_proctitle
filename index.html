@@ -5,30 +5,87 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>alexstaubo/mongrel_proctitle @ GitHub</title>
+	<title>mongrel_proctitle</title>
 	
 	<style type="text/css">
 		body {
-  		margin-top: 1.0em;
+  		margin-top: 50px;
   		background-color: #ffffff;
 		  font-family: "helvetica"; 
-  		color: #000000;
+  		color: #333;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-		h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
+
+		h1 { 
+		  font-size: 40pt; 
+		  color: #222; 
+		  margin-bottom: 30px; 
+		  letter-spacing: -2px;
+		}
 		h1 .small { font-size: 0.4em; }
 		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #000000; }
+		h2 { 
+		  font-size: 20pt; 
+		  color: #222; 
+		  letter-spacing: -1px;
+		  margin-top: 30px;
+		  margin-bottom: 0;
+		}
     h3 { text-align: center; color: #000000; }
     a { color: #000000; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
+    .description { 
+      color: #59f;
+      font-size: 20pt; 
+      margin: 40px 0; 
+      letter-spacing: -1px;
+      font-weight: bold;
+		  line-height: 140%;
+    }
+		pre { 
+		  font-family: "courier new", monospace;
+		  border: dotted 1px #ccc;
+		  font-weight: bold;
+		  font-size: 12pt;
+		  padding: 15px;
+		  margin: 0;
+		  overflow: hidden;
+		}
+
+		pre.example {
+		  font-size: 12px;
+		  color: #ddd;		  
+		} 
+		
+		pre .psline {
+		  background: #f0f0f0;
+		  color: #444;
+		  padding: 3px;
+    }
+    
+    pre strong {
+      color: #888;
+    }
+    
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
+    
+    .example_heading {
+      background: #444;
+      text-align: center;
+      color: #fff;
+      font-size: 10pt;
+      font-weight: bold;
+      width: 120px;
+      margin-left: 40px;
+      padding: 5px 0;
+      position: relative;
+      top: 25px;
+      margin-top: -25px;
+    }
+
+    .footer { text-align:center; padding-top:30px; color: #aaa; }    
 	</style>
 	
 </head>
@@ -37,42 +94,32 @@
   <a href="http://github.com/alexstaubo/mongrel_proctitle"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
   
   <div id="container">
-
-    <div class="download">
-      <a href="http://github.com/alexstaubo/mongrel_proctitle/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/alexstaubo/mongrel_proctitle/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
       
-    <h1><a href="http://github.com/alexstaubo/mongrel_proctitle">mongrel_proctitle</a> 
-      <span class="small">by <a href="http://github.com/alexstaubo">alexstaubo</a></small></h1>
+    <h1><a href="http://github.com/alexstaubo/mongrel_proctitle">mongrel_proctitle</a></h1>
 
     <div class="description">
-      This is a simple module which changes Mongrel's process title to reflect what it's currently doing. You can then determine a given Mongrel server's status using "ps".
+      A simple module which changes Mongrel's process title to reflect what it's currently doing. You can then determine a given Mongrel server's status using "ps".
     </div>
+    
+    <div class="example_heading">Example</div>
 
-    <p><pre>	
-mongrel_rails [10010/2/358]: handling 127.0.0.1: HEAD /feed/calendar/global/91/6de4
+    <p><pre class="example">	
+<span class="psline">mongrel_rails [10010/2/358]: handling 127.0.0.1: HEAD /feed/calendar/global/91/6de4</span>
 |              |     | |     |        |          |
-|              |     | |     |        |          The current request (method and path)
+|              |     | |     |        |          <strong>The current request (method and path)</strong>
 |              |     | |     |        |
-|              |     | |     |        The client IP
+|              |     | |     |        <strong>The client IP</strong>
 |              |     | |     |
-|              |     | |     What it's doing
+|              |     | |     <strong>What it's doing</strong>
 |              |     | |     
-|              |     | The number of requests processed during the server's lifetime
+|              |     | <strong>The number of requests processed during the server's lifetime</strong>
 |              |     |
-|              |     The number of requests currently queued/being processed concurrently
+|              |     <strong>The number of requests currently queued/being processed concurrently</strong>
 |              |
-|              The port that Mongrel is serving
+|              <strong>The port that Mongrel is serving</strong>
 |
-The process name
-</pre></p><h2>Authors</h2>
-<p>Alexander Staubo (alex@bengler.no)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Alexander Staubo (alex@bengler.no)<br/>      </p>
-
+<strong>The process name</strong>
+</pre></p>
 
     <h2>Download</h2>
     <p>
